@@ -10,12 +10,11 @@
   </head>
 
   <body>
+    <%= render partial: 'partials/header' %>
     <div class="page-wrapper">
-      <%= render partial: 'partials/header' %>
       <%= yield %>    
-      <%= render partial: 'partials/footer' %>
     </div>
-    
+    <%= render partial: 'partials/footer' %>
     <%= javascript_pack_tag 'script' %>
   </body>
 </html>
