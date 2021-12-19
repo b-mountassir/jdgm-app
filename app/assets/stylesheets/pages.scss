@@ -132,7 +132,7 @@ body::-webkit-scrollbar-thumb {
   
   .page-wrapper {
     width: 100%;
-    height: 1000px;
+    height: auto;
     position: relative;
   }
   
@@ -486,9 +486,6 @@ a {
     background-color: white; 
 }
 
-img {
-    float: right;
-}
 
 @media (max-width: 450px) {
     .box {
@@ -601,3 +598,39 @@ textarea {
   font-weight:700;
 }
 [type="submit"]:hover { background:var(--cyan); }
+
+.movies-card {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+}
+
+.movie-card.card{
+  background-color: white;
+}
+
+img.movie-image {
+  width: 80%;
+  margin: 0 10%;
+}
+
+.movie-card.card .card-body .card-title {
+  font-size: 17px;
+  text-align: center;
+  height: 45px;
+  margin: 15px 0;
+}
+
+.movie-card.card .card-body .card-title a {
+  color: black;
+}
+p.card-text {
+  color: black;
+  text-align: justify;
+  margin: 21px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
