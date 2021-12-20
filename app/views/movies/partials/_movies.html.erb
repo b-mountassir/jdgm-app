@@ -1,0 +1,6 @@
+<%= render "movies/partials/pagination", page: @page, total_pages: @total_pages %>
+<div class="movies-card">
+  <% movies.each do |movie| %>
+    <%= render "movies/partials/card", movie: movie %>
+  <% end %>
+</div>

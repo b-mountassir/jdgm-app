@@ -5,7 +5,6 @@ class MoviesController < ApplicationController
         res = RestClient.get("https://api.themoviedb.org/3/movie/popular",
                              { params: {
                                api_key: ENV['MOVIE_API_KEY'],
-                               page: 1,
                                page: get_page
                              }})
         data = JSON.parse(res.body, symbolize_names: true)
@@ -43,7 +42,7 @@ class MoviesController < ApplicationController
         data = JSON.parse(res.body, symbolize_names: true)
         @movies = data[:results]
         @page = data[:page]
-        @total_page = data[:total_pages]
+        @total_pages = data[:total_pages]
       rescue => e  # catch all exceptions includes: network error, response err, json parse exception
         puts e, "-----"
         render "layouts/404" and return

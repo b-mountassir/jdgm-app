@@ -7,6 +7,11 @@
       <li class="nav-item"><%= link_to "About", about_url %></li>
       <li class="nav-item"><%= link_to "Contact", contact_url %></li>
       <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+      <%= form_with url: "/search", method: :get do |form| %>
+        <%= form.label :query, :search %>
+        <%= form.text_field :query %>
+        <%= form.submit "Search" %>
+      <% end %>
     </ul>
   </nav>
 </div>

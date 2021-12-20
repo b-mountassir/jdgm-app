@@ -603,6 +603,8 @@ textarea {
   display: flex;
   flex-flow: wrap;
   justify-content: space-evenly;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .movie-card.card{
@@ -633,4 +635,41 @@ p.card-text {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+ul.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 15%;
+}
+
+li.page-item, .page-link {
+  padding: 10px;
+  background: cadetblue;
+  border-radius: 6px;
+}
+ul.pagination {
+  margin: 0 auto;
+}
+
+form {
+  padding: 5px 5px;
+  width: 33%;
+}
+
+form label {
+  color: white;
+
+}
+input[type="submit"] {
+  width: 50%;
+  height: 30px;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 5px;
+}
+input#query {
+  height: 30px;
+  width: 80%;
 }
